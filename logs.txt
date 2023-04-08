@@ -1,0 +1,605 @@
+
+tamar@DESKTOP-K8R572C MINGW64 /
+$ cd
+
+tamar@DESKTOP-K8R572C MINGW64 ~
+$ cd Documents
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents
+$ cd GitWorkspace
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace
+$ mkdir SI_2023_lab1_201205
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace
+$ ls
+SI_2023_lab1_201205/
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace
+$ cd SI_2023_lab1_201205
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205
+$ git init
+Initialized empty Git repository in C:/Users/tamar/Documents/GitWorkspace/SI_2023_lab1_201205/.git/
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git remote add origin https://github.com/tam1312/SI_2023_lab1_201205.git
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git remote -v
+origin  https://github.com/tam1312/SI_2023_lab1_201205.git (fetch)
+origin  https://github.com/tam1312/SI_2023_lab1_201205.git (push)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ touch README.md
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ls
+README.md
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ echo "Tamara Todorovska 201205" >> README.md
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ls
+README.md
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ cat README.md
+Tamara Todorovska 201205
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git commit -m "Initial commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'tamar@DESKTOP-K8R572C.(none)')
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git config --global user.email veryobscureusername@gmail.com
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git config --global user.name tam1312
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 1763ecf] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ touch SILab1.java
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ls
+README.md  SILab1.java
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ echo "import java.util.ArrayList;
+imls
+$ echo "import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class SILab1 {
+    public static List<Integer> filterOddNumbers(List<Integer> list) {
+        List<Integer> result = new ArrayList<>();
+        for (Integer el : list) {
+            if (el % 2 == 0) {
+                result.add(el);
+            }
+        }
+        return result;
+    }
+
+    private static int sumEvenNumbers(List<Integer> list) {
+        int sum = 1;
+        for (Integer el : list) {
+            if (el % 2 == 0) {
+                sum *= el;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i <= n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        System.out.println(filterOddNumbers(list));
+
+        System.out.println(sumEvenNumbers(list));
+    }
+}" >> SILab1.java
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ cat SILab1.java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class SILab1 {
+    public static List<Integer> filterOddNumbers(List<Integer> list) {
+        List<Integer> result = new ArrayList<>();
+        for (Integer el : list) {
+            if (el % 2 == 0) {
+                result.add(el);
+            }
+        }
+        return result;
+    }
+
+    private static int sumEvenNumbers(List<Integer> list) {
+        int sum = 1;
+        for (Integer el : list) {
+            if (el % 2 == 0) {
+                sum *= el;
+            }
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = 0; i <= n; i++) {
+            list.add(sc.nextInt());
+        }
+
+        System.out.println(filterOddNumbers(list));
+
+        System.out.println(sumEvenNumbers(list));
+    }
+}
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SILab1.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git add SILab1.java
+warning: in the working copy of 'SILab1.java', LF will be replaced by CRLF the next time Gi
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SILab1.java
+
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git commit -m "Add java class"
+[master b074b54] Add java class
+ 1 file changed, 41 insertions(+)
+ create mode 100644 SILab1.java
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git log
+commit b074b546b6c77761d6d068bcf8b22aacb3cdf0d2 (HEAD -> master)
+Author: tam1312 <veryobscureusername@gmail.com>
+Date:   Mon Apr 3 01:03:10 2023 +0200
+
+    Add java class
+
+commit 1763ecfab1ac3284f3247167ed3bc09c981d94be
+Author: tam1312 <veryobscureusername@gmail.com>
+Date:   Mon Apr 3 00:49:57 2023 +0200
+
+    Initial commit
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git remote -v
+origin  https://github.com/tam1312/SI_2023_lab1_201205.git (fetch)
+origin  https://github.com/tam1312/SI_2023_lab1_201205.git (push)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git push -u origin master
+
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 837 bytes | 418.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/tam1312/SI_2023_lab1_201205.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$
+
+
+
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git branch bug1 master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git branch bug2 master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git branch bug3 master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git branch
+  bug1
+  bug2
+  bug3
+* master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug1)
+$ git status
+On branch bug1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug1)
+$ git add SILab1.java
+warning: in the working copy of 'SILab1.java', LF will be replaced by CRLF the next time Git touches it
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug1)
+$ git status
+On branch bug1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1.java
+
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug1)
+$ git commit -m "Fix wrong loop for reading"
+[bug1 66b10cf] Fix wrong loop for reading
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug1)
+$ git status
+On branch bug1
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug2)
+$ git status
+On branch bug2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug2)
+$ git add SILab1.java
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug2)
+$ git status
+On branch bug2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1.java
+
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug2)
+$ git commit -m "Fix wrong condition in filterOddNumbers"
+[bug2 17355fa] Fix wrong condition in filterOddNumbers
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug2)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug2)
+$ git status
+On branch bug2
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug2)
+$ git checkout bug3
+Switched to branch 'bug3'
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git status
+On branch bug3
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git branch
+  bug1
+  bug2
+* bug3
+  master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git status
+On branch bug3
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git add SILab1.java
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git status
+On branch bug3
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1.java
+
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git commit -m "Fix method sumEvenNumbers"
+[bug3 a7cb9f5] Fix method sumEvenNumbers
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git status
+On branch bug3
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git branch
+  bug1
+  bug2
+* bug3
+  master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git branch
+  bug1
+  bug2
+  bug3
+* master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git push --all origin
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 826 bytes | 826.00 KiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 1 local object.
+To https://github.com/tam1312/SI_2023_lab1_201205.git
+ * [new branch]      bug1 -> bug1
+ * [new branch]      bug2 -> bug2
+ * [new branch]      bug3 -> bug3
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git branch
+  bug1
+  bug2
+  bug3
+* master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git merge bug1
+Updating b074b54..66b10cf
+Fast-forward
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Merge made by the 'ort' strategy.
+ SILab1.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git push --all origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 365 bytes | 365.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/tam1312/SI_2023_lab1_201205.git
+   66b10cf..70cfa9a  master -> master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git checkout bug3
+Switched to branch 'bug3'
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git branch
+  bug1
+  bug2
+* bug3
+  master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git rebase master
+Successfully rebased and updated refs/heads/bug3.
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (bug3)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git branch
+  bug1
+  bug2
+  bug3
+* master
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git merge bug3
+Updating 70cfa9a..f7473b5
+Fast-forward
+ SILab1.java | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git push --all origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 347 bytes | 347.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/tam1312/SI_2023_lab1_201205.git
+   70cfa9a..f7473b5  master -> master
+ ! [rejected]        bug3 -> bug3 (non-fast-forward)
+error: failed to push some refs to 'https://github.com/tam1312/SI_2023_lab1_201205.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. Check out this branch and integrate the remote changes
+hint: (e.g. 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ ^C
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git push --force-with-lease origin bug3
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/tam1312/SI_2023_lab1_201205.git
+ + a7cb9f5...f7473b5 bug3 -> bug3 (forced update)
+
+tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+
