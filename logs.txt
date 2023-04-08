@@ -46,7 +46,7 @@ $ ls
 README.md
 
 tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
-$ echo "Tamara Todorovska 201205" >> README.md
+$ echo "201205" >> README.md
 
 tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
 $ ls
@@ -54,7 +54,7 @@ README.md
 
 tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
 $ cat README.md
-Tamara Todorovska 201205
+201205
 
 tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
 $ git status
@@ -92,7 +92,7 @@ tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (mast
 $ ^C
 
 tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
-$ git config --global user.email veryobscureusername@gmail.com
+$ git config --global user.email v@gmail.com
 
 tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
 $ git config --global user.name tam1312
@@ -248,13 +248,13 @@ $ ^C
 tamar@DESKTOP-K8R572C MINGW64 ~/Documents/GitWorkspace/SI_2023_lab1_201205 (master)
 $ git log
 commit b074b546b6c77761d6d068bcf8b22aacb3cdf0d2 (HEAD -> master)
-Author: tam1312 <veryobscureusername@gmail.com>
+Author: tam1312 <v@gmail.com>
 Date:   Mon Apr 3 01:03:10 2023 +0200
 
     Add java class
 
 commit 1763ecfab1ac3284f3247167ed3bc09c981d94be
-Author: tam1312 <veryobscureusername@gmail.com>
+Author: tam1312 <v@gmail.com>
 Date:   Mon Apr 3 00:49:57 2023 +0200
 
     Initial commit
